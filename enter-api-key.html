@@ -15,6 +15,12 @@
         
         <script>
             let rootPath = "https://mysite.itvarsity.org/api/ContactBook/";
+            // Do NOT redeclare imageRoot here!
+            let apiKey = localStorage.getItem("apiKey");
+            if (!apiKey) {
+                window.open("enter-api-key.html", "_self");
+            }
+
             document.getElementById("submitApiKey").addEventListener('click', setApiKey);
 
             function setApiKey(e){
@@ -34,6 +40,15 @@
                                 alert(data + "Invalid API key entered!");
                             }
                         })
+            }
+
+            const exampleData = [
+                { avatar: "avengers_01.jpg", firstname: "tony", lastname: "sart" },
+                { avatar: "avengers_01.jpg", firstname: "Thor", lastname: "Odinson" }
+            ];
+
+            function fetchContacts() {
+                displayOutput(exampleData);
             }
         </script>
     </body>
