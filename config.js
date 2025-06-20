@@ -1,6 +1,4 @@
-
-
-let rootPath = "https://mysite.itvarsity.org/api/ContactBook/";
+let rootpath = "file:///C:/Users/nhlan/Documents/websites/sphindile%20web/pine-city-zoo/avengers";
 let apiKey = checkApiKey();
 
 function checkApiKey() {
